@@ -1,0 +1,246 @@
+@whiteFont: #bebebe;
+@purple: #823c9f;
+
+html, body {
+	height: 100%;
+	margin: 0;
+}
+
+body {
+	background-color: darken(@purple, 30%);
+	font-family: Garamond, serif;
+	font-size: 22px;
+	color: @whiteFont;
+
+	input[type=text] {
+		background-color: darken(@purple, 20%);
+		color: @whiteFont;
+		border: none;
+		box-sizing: border-box;
+	}
+	button, input[type=button], input[type=submit] {
+		background-color: darken(@purple, 20%);
+		border: none;
+		color: @whiteFont;
+		text-align: center;
+		text-decoration: none;
+		display: inline-block;
+		margin: 4px 2px;
+		cursor: pointer;
+	}
+}
+
+.Page{
+	position: relative;
+	min-height: 100vh;
+}
+
+.Content {
+	padding-top: 50px;
+	padding-bottom: 50px;
+}
+
+
+.Header {
+	-webkit-box-shadow: 0 0 10px 8px rgba(0,0,0,0.31);
+	box-shadow: 0 0 10px 8px rgba(0,0,0,0.31);
+	position: fixed;
+	width: 100%;
+	top: 0;
+
+	ul {
+		list-style-type: none;
+		margin: 0;
+		padding: 0;
+		overflow: hidden;
+		background-color: darken(@purple, 25%);
+		li{
+			display: inline;
+			float: left;
+			a {
+				display: block;
+				color: @whiteFont;
+				text-align: center;
+				padding: 15px 16px;
+				text-decoration: none;
+			}
+			a:hover {
+				background-color: lighten(darken(@purple, 30%), 5%);
+			}
+			img {
+				height: 53px;
+				width: auto;
+			}
+		}
+	}
+}
+
+.Content {
+	min-height: 100%;
+}
+
+.Footer {
+	background-color: darken(@purple, 25%);
+	text-align: center;
+	color: darken(@whiteFont, 30%);
+	padding-top: 10px;
+	position: fixed;
+	width: 100%;
+	height: 20px;
+	bottom: 0;
+	font-size: 14px;
+	-webkit-box-shadow: 0 0 10px 8px rgba(0,0,0,0.31);
+	box-shadow: 0 0 10px 8px rgba(0,0,0,0.31);
+}
+
+::-webkit-scrollbar {
+	width: 12px;
+}
+
+::-webkit-scrollbar-track {
+	-webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.8);
+	border-radius: 10px;
+}
+
+::-webkit-scrollbar-thumb {
+	border-radius: 10px;
+	-webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.8);
+}
+
+.AdminPage {
+	margin: 20px 20px;
+	.AdminAddDrinkForm {
+		width: 50%;
+		float: left;
+		input[type=text] {
+			background-color: darken(@purple, 20%);
+			color: @whiteFont;
+			border: none;
+			box-sizing: border-box;
+		}
+	}
+	.AdminManageDrink {
+		width: 50%;
+		float: left;
+	}
+
+	.AdminManageComments {
+		width: 100%;
+		float: left;
+	}
+}
+
+.StatsPage {
+	margin: 50px 20px;
+
+	.StatsTable {
+		float: left;
+		width: auto;
+
+
+		table {
+			width: 500px;
+			th, td {
+				border: 1px solid darken(@purple, 20%);
+			}
+		}
+	}
+
+	.StatsChart {
+		float: left;
+		width: 50%;
+	}
+}
+
+.Drink {
+	margin: 20px 100px;
+
+	h3, h5, h4 {
+		margin-top: 0;
+		margin-bottom: 0;
+	}
+
+	h3 {
+		color: lighten(@purple, 10%);
+	}
+
+	h5 {
+		color: lighten(@purple, 2%);
+	}
+
+	h4, li, p {
+		color: @whiteFont;
+		word-wrap: normal;
+	}
+
+	img {
+		margin-top: 10px;
+		border-radius: 12px;
+		max-height: 450px;
+		width: auto;
+		box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+	}
+
+	.DrinkComments {
+		border: @purple 2px solid;
+		hr {
+			border: @purple 1px solid;
+		}
+	}
+}
+
+.DrinkList {
+	list-style-type: none;
+	margin: 20px 100px;
+
+	.DrinkSearch {
+		position: fixed;
+		top: 10px;
+		right: 10px;
+		margin-left: 35%;
+		input[type=text] {
+			padding: 12px 20px;
+			background-color: darken(@purple, 20%);
+			color: @whiteFont;
+			border: none;
+			box-sizing: border-box;
+		}
+	}
+
+	ul {
+		li {
+			display: inline-block;
+			vertical-align: top;
+			height: 100px;
+			padding-left: 10px;
+			padding-right: 10px;
+			padding-bottom: 180px;
+		}
+	}
+}
+
+.DrinkSmall {
+	border: @purple 2px solid;
+	border-radius: 12px;
+	text-align: center;
+	width: 250px;
+	height: 250px;
+
+	img {
+		border-radius: 12px;
+		height: 150px;
+		width: auto;
+		max-width: 100%;
+		margin: 5px 5px;
+	}
+
+	h3, h5 {
+		color: lighten(@purple, 10%);
+		margin-top: 5px;
+		margin-bottom: 0;
+	}
+
+	hr {
+		border: @purple 1px solid;
+	}
+}
