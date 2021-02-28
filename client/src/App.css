@@ -1,0 +1,217 @@
+html,
+body {
+  height: 100%;
+  margin: 0;
+}
+body {
+  background-color: #271230;
+  font-family: Garamond, serif;
+  font-size: 22px;
+  color: #bebebe;
+}
+body input[type=text] {
+  background-color: #452055;
+  color: #bebebe;
+  border: none;
+  box-sizing: border-box;
+}
+body button,
+body input[type=button],
+body input[type=submit] {
+  background-color: #452055;
+  border: none;
+  color: #bebebe;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  margin: 4px 2px;
+  cursor: pointer;
+}
+.Page {
+  position: relative;
+  min-height: 100vh;
+}
+.Content {
+  padding-top: 50px;
+  padding-bottom: 50px;
+}
+.Header {
+  -webkit-box-shadow: 0 0 10px 8px rgba(0, 0, 0, 0.31);
+  box-shadow: 0 0 10px 8px rgba(0, 0, 0, 0.31);
+  position: fixed;
+  width: 100%;
+  top: 0;
+}
+.Header ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  background-color: #361942;
+}
+.Header ul li {
+  display: inline;
+  float: left;
+}
+.Header ul li a {
+  display: block;
+  color: #bebebe;
+  text-align: center;
+  padding: 15px 16px;
+  text-decoration: none;
+}
+.Header ul li a:hover {
+  background-color: #361942;
+}
+.Header ul li img {
+  height: 53px;
+  width: auto;
+}
+.Content {
+  min-height: 100%;
+}
+.Footer {
+  background-color: #361942;
+  text-align: center;
+  color: #727272;
+  padding-top: 10px;
+  position: fixed;
+  width: 100%;
+  height: 20px;
+  bottom: 0;
+  font-size: 14px;
+  -webkit-box-shadow: 0 0 10px 8px rgba(0, 0, 0, 0.31);
+  box-shadow: 0 0 10px 8px rgba(0, 0, 0, 0.31);
+}
+::-webkit-scrollbar {
+  width: 12px;
+}
+::-webkit-scrollbar-track {
+  -webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.8);
+  border-radius: 10px;
+}
+::-webkit-scrollbar-thumb {
+  border-radius: 10px;
+  -webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.8);
+}
+.AdminPage {
+  margin: 20px 20px;
+}
+.AdminPage .AdminAddDrinkForm {
+  width: 50%;
+  float: left;
+}
+.AdminPage .AdminAddDrinkForm input[type=text] {
+  background-color: #452055;
+  color: #bebebe;
+  border: none;
+  box-sizing: border-box;
+}
+.AdminPage .AdminManageDrink {
+  width: 50%;
+  float: left;
+}
+.AdminPage .AdminManageComments {
+  width: 100%;
+  float: left;
+}
+.StatsPage {
+  margin: 50px 20px;
+}
+.StatsPage .StatsTable {
+  float: left;
+  width: auto;
+}
+.StatsPage .StatsTable table {
+  width: 500px;
+}
+.StatsPage .StatsTable table th,
+.StatsPage .StatsTable table td {
+  border: 1px solid #452055;
+}
+.StatsPage .StatsChart {
+  float: left;
+  width: 50%;
+}
+.Drink {
+  margin: 20px 100px;
+}
+.Drink h3,
+.Drink h5,
+.Drink h4 {
+  margin-top: 0;
+  margin-bottom: 0;
+}
+.Drink h3 {
+  color: #9d51bd;
+}
+.Drink h5 {
+  color: #883fa6;
+}
+.Drink h4,
+.Drink li,
+.Drink p {
+  color: #bebebe;
+  word-wrap: normal;
+}
+.Drink img {
+  margin-top: 10px;
+  border-radius: 12px;
+  max-height: 450px;
+  width: auto;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+.Drink .DrinkComments {
+  border: #823c9f 2px solid;
+}
+.Drink .DrinkComments hr {
+  border: #823c9f 1px solid;
+}
+.DrinkList {
+  list-style-type: none;
+  margin: 20px 100px;
+}
+.DrinkList .DrinkSearch {
+  position: fixed;
+  top: 10px;
+  right: 10px;
+  margin-left: 35%;
+}
+.DrinkList .DrinkSearch input[type=text] {
+  padding: 12px 20px;
+  background-color: #452055;
+  color: #bebebe;
+  border: none;
+  box-sizing: border-box;
+}
+.DrinkList ul li {
+  display: inline-block;
+  vertical-align: top;
+  height: 100px;
+  padding-left: 10px;
+  padding-right: 10px;
+  padding-bottom: 180px;
+}
+.DrinkSmall {
+  border: #823c9f 2px solid;
+  border-radius: 12px;
+  text-align: center;
+  width: 250px;
+  height: 250px;
+}
+.DrinkSmall img {
+  border-radius: 12px;
+  height: 150px;
+  width: auto;
+  max-width: 100%;
+  margin: 5px 5px;
+}
+.DrinkSmall h3,
+.DrinkSmall h5 {
+  color: #9d51bd;
+  margin-top: 5px;
+  margin-bottom: 0;
+}
+.DrinkSmall hr {
+  border: #823c9f 1px solid;
+}
