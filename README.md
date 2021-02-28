@@ -4,6 +4,10 @@ Cocktail app is a react + express app about various cocktail drinks. You can che
 
 # Features
 * Drink list
+* Drink pages with recipe and needed ingridients 
+* Drinks can be rated and commented
+* Admin page that allows managing drinks and comments
+* Statistics about drinks
 
 # Installation and running
 The application consist of Express Server and React.js Client. You need to run both to run the application.
