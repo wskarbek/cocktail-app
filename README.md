@@ -1,6 +1,6 @@
 ![logo](https://github.com/wskarbek/cocktail-app/blob/main/client/public/logo.png)
 
-Cocktail app is a react + express app about various cocktail drinks. You can check the application there: https://cocktail-app-biu.herokuapp.com/. It was a project for BIU subject at PJAIT university.
+Cocktail app is a react + express app about various cocktail drinks. You can check the application there: https://ca.wskarbek.xyz/. It was a project for BIU subject at PJAIT university.
 # Features
 * Drink list
 * Drink pages with recipe and needed ingridients 
