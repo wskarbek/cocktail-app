@@ -1,4 +1,4 @@
-import React, {useEffect, useState} from "react";
+import React, { useState } from "react";
 
 import DrinkComments from "./DrinkComments";
 import DrinkStar from "./DrinkStars";
@@ -11,25 +11,6 @@ export default function DrinkView({drink, id}) {
     if(drink.rating !== undefined) tempStars = drink.rating.score;
 
     const [stars, setStars] = useState(tempStars);
-
-    console.log(stars);
-
-    function exportToJson(d) {
-        let filename = "export.json";
-        let contentType = "application/json;charset=utf-8;";
-        if (window.navigator && window.navigator.msSaveOrOpenBlob) {
-            var blob = new Blob([decodeURIComponent(encodeURI(JSON.stringify(d)))], { type: contentType });
-            navigator.msSaveOrOpenBlob(blob, filename);
-        } else {
-            var a = document.createElement('a');
-            a.download = filename;
-            a.href = 'data:' + contentType + ',' + encodeURIComponent(JSON.stringify(d));
-            a.target = '_blank';
-            document.body.appendChild(a);
-            a.click();
-            document.body.removeChild(a);
-        }
-    }
 
     async function rateDrink(stars) {
         await fetch(`${process.env.REACT_APP_SERVER_URL}/drinks/${id}/${stars + 1}`)
@@ -60,7 +41,6 @@ export default function DrinkView({drink, id}) {
                     }
                 </ul>
                 <p>{drink.recipe}</p>
-                <button onClick={() => exportToJson(drink)}>Download to JSON file</button>
                 <br/><br/>
                 <DrinkComments id={id}/>
             </div>

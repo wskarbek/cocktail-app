@@ -9,25 +9,42 @@ html, body {
 body {
 	background-color: darken(@purple, 30%);
 	font-family: Garamond, serif;
-	font-size: 22px;
 	color: @whiteFont;
+	@media only screen and (max-width: 850px) {
+		font-size: 15px;
+	}
+	@media only screen and (min-width: 850px) {
+		font-size: 22px;
+	}
+}
 
-	input[type=text] {
-		background-color: darken(@purple, 20%);
-		color: @whiteFont;
-		border: none;
-		box-sizing: border-box;
+.Content {
+	@media only screen and (max-width: 850px) {
+		padding-top: 5px;
+		padding-bottom: 5px;
 	}
-	button, input[type=button], input[type=submit] {
-		background-color: darken(@purple, 20%);
-		border: none;
-		color: @whiteFont;
-		text-align: center;
-		text-decoration: none;
-		display: inline-block;
-		margin: 4px 2px;
-		cursor: pointer;
+	@media only screen and (min-width: 850px) {
+		padding-top: 50px;
+		padding-bottom: 50px;
 	}
+}
+
+input[type=text] {
+	background-color: darken(@purple, 20%);
+	color: @whiteFont;
+	border: none;
+	box-sizing: border-box;
+}
+
+button, input[type=button], input[type=submit] {
+	background-color: darken(@purple, 20%);
+	border: none;
+	color: @whiteFont;
+	text-align: center;
+	text-decoration: none;
+	display: inline-block;
+	margin: 4px 2px;
+	cursor: pointer;
 }
 
 .Page{
@@ -35,15 +52,9 @@ body {
 	min-height: 100vh;
 }
 
-.Content {
-	padding-top: 50px;
-	padding-bottom: 50px;
-}
-
-
 .Header {
-	-webkit-box-shadow: 0 0 10px 8px rgba(0,0,0,0.31);
-	box-shadow: 0 0 10px 8px rgba(0,0,0,0.31);
+	-webkit-box-shadow: 0 0 10px 8px rgba(0, 0, 0, 0.31);
+	box-shadow: 0 0 10px 8px rgba(0, 0, 0, 0.31);
 	position: fixed;
 	width: 100%;
 	top: 0;
@@ -54,21 +65,35 @@ body {
 		padding: 0;
 		overflow: hidden;
 		background-color: darken(@purple, 25%);
-		li{
+
+		li {
 			display: inline;
 			float: left;
+
 			a {
 				display: block;
 				color: @whiteFont;
 				text-align: center;
-				padding: 15px 16px;
 				text-decoration: none;
+				@media only screen and (max-width: 850px) {
+					padding: 10px 11px;
+				}
+				@media only screen and (min-width: 850px) {
+					padding: 15px 16px;
+				}
 			}
+
 			a:hover {
 				background-color: lighten(darken(@purple, 30%), 5%);
 			}
+
 			img {
-				height: 53px;
+				@media only screen and (max-width: 850px) {
+					height: 33px;
+				}
+				@media only screen and (min-width: 850px) {
+					height: 53px;
+				}
 				width: auto;
 			}
 		}
@@ -77,20 +102,6 @@ body {
 
 .Content {
 	min-height: 100%;
-}
-
-.Footer {
-	background-color: darken(@purple, 25%);
-	text-align: center;
-	color: darken(@whiteFont, 30%);
-	padding-top: 10px;
-	position: fixed;
-	width: 100%;
-	height: 20px;
-	bottom: 0;
-	font-size: 14px;
-	-webkit-box-shadow: 0 0 10px 8px rgba(0,0,0,0.31);
-	box-shadow: 0 0 10px 8px rgba(0,0,0,0.31);
 }
 
 ::-webkit-scrollbar {
@@ -137,9 +148,13 @@ body {
 		float: left;
 		width: auto;
 
-
 		table {
-			width: 500px;
+			@media only screen and (max-width: 850px) {
+				width: 300px;
+			}
+			@media only screen and (min-width: 850px) {
+				width: 500px;
+			}
 			th, td {
 				border: 1px solid darken(@purple, 20%);
 			}
@@ -153,7 +168,12 @@ body {
 }
 
 .Drink {
-	margin: 20px 100px;
+	@media only screen and (max-width: 850px) {
+		margin: 50px 10px;
+	}
+	@media only screen and (min-width: 850px) {
+		margin: 20px 100px;
+	}
 
 	h3, h5, h4 {
 		margin-top: 0;
@@ -174,9 +194,14 @@ body {
 	}
 
 	img {
+		@media only screen and (max-width: 850px) {
+			max-height: 200px;
+		}
+		@media only screen and (min-width: 850px) {
+			max-height: 450px;
+		}
 		margin-top: 10px;
 		border-radius: 12px;
-		max-height: 450px;
 		width: auto;
 		box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
 	}
@@ -191,20 +216,45 @@ body {
 
 .DrinkList {
 	list-style-type: none;
-	margin: 20px 100px;
+	@media only screen and (max-width: 850px) {
+		margin: 70px 0;
+	}
+	@media only screen and (min-width: 850px) {
+		margin: 20px 100px;
+	}
 
 	.DrinkSearch {
 		position: fixed;
-		top: 10px;
-		right: 10px;
-		margin-left: 35%;
-		input[type=text] {
-			padding: 12px 20px;
-			background-color: darken(@purple, 20%);
-			color: @whiteFont;
-			border: none;
-			box-sizing: border-box;
+		@media only screen and (max-width: 850px) {
+			top: 5px;
+			right: 5px;
+			margin-left: 35%;
+			input[type=text] {
+				padding: 6px 10px;
+				width: 80px;
+				background-color: darken(@purple, 20%);
+				color: @whiteFont;
+				border: none;
+				box-sizing: border-box;
+
+			}
+			label[for="DrinkSearchBar"] {
+				display:none;
+			}
 		}
+		@media only screen and (min-width: 850px) {
+			top: 10px;
+			right: 10px;
+			margin-left: 35%;
+			input[type=text] {
+				padding: 12px 20px;
+				background-color: darken(@purple, 20%);
+				color: @whiteFont;
+				border: none;
+				box-sizing: border-box;
+			}
+		}
+
 	}
 
 	ul {
@@ -214,24 +264,43 @@ body {
 			height: 100px;
 			padding-left: 10px;
 			padding-right: 10px;
-			padding-bottom: 180px;
+			@media only screen and (max-width: 850px) {
+				padding-bottom: 40px;
+			}
+			@media only screen and (min-width: 850px) {
+				padding-bottom: 180px;
+			}
 		}
 	}
 }
 
 .DrinkSmall {
-	border: @purple 2px solid;
+	@media only screen and (max-width: 850px) {
+		border: @purple 1px solid;
+		width: 130px;
+		height: 130px;
+	}
+	@media only screen and (min-width: 850px) {
+		border: @purple 2px solid;
+		width: 250px;
+		height: 250px;
+	}
+
 	border-radius: 12px;
 	text-align: center;
-	width: 250px;
-	height: 250px;
 
 	img {
+		@media only screen and (max-width: 850px) {
+			height: 60px;
+			margin: 2px 2px;
+		}
+		@media only screen and (min-width: 850px) {
+			height: 150px;
+			margin: 5px 5px;
+		}
 		border-radius: 12px;
-		height: 150px;
 		width: auto;
 		max-width: 100%;
-		margin: 5px 5px;
 	}
 
 	h3, h5 {

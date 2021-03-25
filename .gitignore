@@ -40,3 +40,4 @@ yarn-error.log*
 .idea
 .eslintcache
 public/assets/photos
+App.css

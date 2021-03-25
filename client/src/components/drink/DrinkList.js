@@ -15,9 +15,7 @@ export default function DrinkList({drinks}) {
     return (
         <div className="DrinkList">
             <div className="DrinkSearch">
-                <label>Search for drink:
-                    <input type="text"onChange={(e)=>searchDrink(e)}/>
-                </label>
+                <input type="text" name="DrinkSearchBar" placeholder="Search" onChange={(e)=>searchDrink(e)}/>
             </div>
             <ul>
                 {

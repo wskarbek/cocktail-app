@@ -7,7 +7,6 @@ import {
 import './App.css';
 
 /* Site main components */
-import Footer from "./components/site/Footer";
 import Header from "./components/site/Header";
 
 /* Containers */
@@ -27,7 +26,6 @@ class App extends Component {
                     <Route path="/admin" component={AdminPage}/>
                     <Route path="/stats" component={StatsPage}/>
                 </div>
-                <Footer/>
             </Router>
         );
     }
