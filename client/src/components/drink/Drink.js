@@ -1,4 +1,4 @@
-import React, {useState} from "react";
+import React, {useEffect, useState} from "react";
 
 import DrinkComments from "./DrinkComments";
 import DrinkStar from "./DrinkStars";
@@ -7,7 +7,12 @@ const createArray = length => [...Array(length)];
 
 export default function DrinkView({drink, id}) {
 
-    const [stars, setStars] = useState(3);
+    let tempStars = 0;
+    if(drink.rating !== undefined) tempStars = drink.rating.score;
+
+    const [stars, setStars] = useState(tempStars);
+
+    console.log(stars);
 
     function exportToJson(d) {
         let filename = "export.json";
@@ -43,7 +48,7 @@ export default function DrinkView({drink, id}) {
                         return <DrinkStar key={i} selected={stars > i} onSelect={() => rateDrink(i)}/>
                     })
                 }
-                <c>  Score: { Math.round((stars + Number.EPSILON) * 100) / 100 } / 5</c>
+                Score: { Math.round(stars * 100) / 100 } / 5
                 <br/>
                 <img src={`${drink.photo}`} alt={drink.name}/>
                 <h4>Best served in: {drink.glass}</h4>
